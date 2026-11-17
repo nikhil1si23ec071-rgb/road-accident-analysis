@@ -1,0 +1,12 @@
+# Runtime
+streamlit>=1.50,<2
+plotly>=5.24
+pandas>=2.2
+numpy>=1.26
+scipy>=1.11
+
+# Tests and notebook execution (optional)
+pytest>=8
+nbformat>=5.9
+nbconvert>=7
+ipykernel>=6

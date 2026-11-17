@@ -1,0 +1,1131 @@
+{
+  "shape": {
+    "rows": 20000,
+    "columns": 24
+  },
+  "schema": {
+    "missing_expected_columns": [],
+    "unexpected_columns": []
+  },
+  "memory_mb": 5.26,
+  "columns": [
+    {
+      "column": "accident_id",
+      "dtype": "int64",
+      "role": "identifier",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 20000,
+      "examples": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "column": "city",
+      "dtype": "str",
+      "role": "categorical",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 8,
+      "examples": [
+        "Pune",
+        "Mumbai",
+        "Chandigarh",
+        "Chennai",
+        "Delhi"
+      ]
+    },
+    {
+      "column": "state",
+      "dtype": "str",
+      "role": "categorical",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 7,
+      "examples": [
+        "Maharashtra",
+        "Punjab",
+        "Tamil Nadu",
+        "Delhi",
+        "Karnataka"
+      ]
+    },
+    {
+      "column": "latitude",
+      "dtype": "float64",
+      "role": "numeric",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 19907,
+      "examples": [
+        "18.680827",
+        "18.817732",
+        "19.096889",
+        "30.787805",
+        "12.965155"
+      ]
+    },
+    {
+      "column": "longitude",
+      "dtype": "float64",
+      "role": "numeric",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 19927,
+      "examples": [
+        "73.930388",
+        "72.790846",
+        "72.819424",
+        "76.847507",
+        "80.283313"
+      ]
+    },
+    {
+      "column": "date",
+      "dtype": "str",
+      "role": "date/time",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 1201,
+      "examples": [
+        "2023-10-22",
+        "2023-05-21",
+        "2024-07-10",
+        "2025-03-30",
+        "2024-01-25"
+      ]
+    },
+    {
+      "column": "time",
+      "dtype": "str",
+      "role": "date/time",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 24,
+      "examples": [
+        "5:00",
+        "4:00",
+        "13:00",
+        "11:00",
+        "16:00"
+      ]
+    },
+    {
+      "column": "hour",
+      "dtype": "int64",
+      "role": "numeric",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 24,
+      "examples": [
+        "5",
+        "4",
+        "13",
+        "11",
+        "16"
+      ]
+    },
+    {
+      "column": "day_of_week",
+      "dtype": "str",
+      "role": "categorical",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 7,
+      "examples": [
+        "Sunday",
+        "Wednesday",
+        "Thursday",
+        "Monday",
+        "Friday"
+      ]
+    },
+    {
+      "column": "is_weekend",
+      "dtype": "int64",
+      "role": "binary",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 2,
+      "examples": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "column": "road_type",
+      "dtype": "str",
+      "role": "categorical",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 3,
+      "examples": [
+        "highway",
+        "urban",
+        "rural"
+      ]
+    },
+    {
+      "column": "lanes",
+      "dtype": "int64",
+      "role": "numeric",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 6,
+      "examples": [
+        "3",
+        "4",
+        "1",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "column": "traffic_signal",
+      "dtype": "int64",
+      "role": "binary",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 2,
+      "examples": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "column": "weather",
+      "dtype": "str",
+      "role": "categorical",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 3,
+      "examples": [
+        "fog",
+        "clear",
+        "rain"
+      ]
+    },
+    {
+      "column": "visibility",
+      "dtype": "str",
+      "role": "categorical",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 3,
+      "examples": [
+        "low",
+        "high",
+        "medium"
+      ]
+    },
+    {
+      "column": "temperature",
+      "dtype": "int64",
+      "role": "numeric",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 26,
+      "examples": [
+        "32",
+        "34",
+        "21",
+        "30",
+        "24"
+      ]
+    },
+    {
+      "column": "traffic_density",
+      "dtype": "str",
+      "role": "categorical",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 3,
+      "examples": [
+        "high",
+        "low",
+        "medium"
+      ]
+    },
+    {
+      "column": "cause",
+      "dtype": "str",
+      "role": "categorical",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 5,
+      "examples": [
+        "weather",
+        "distraction",
+        "overspeeding",
+        "drunk driving",
+        "poor road"
+      ]
+    },
+    {
+      "column": "accident_severity",
+      "dtype": "str",
+      "role": "categorical",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 3,
+      "examples": [
+        "fatal",
+        "major",
+        "minor"
+      ]
+    },
+    {
+      "column": "vehicles_involved",
+      "dtype": "int64",
+      "role": "numeric",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 5,
+      "examples": [
+        "2",
+        "4",
+        "1",
+        "5",
+        "3"
+      ]
+    },
+    {
+      "column": "casualties",
+      "dtype": "int64",
+      "role": "numeric",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 6,
+      "examples": [
+        "2",
+        "3",
+        "1",
+        "4",
+        "0"
+      ]
+    },
+    {
+      "column": "is_peak_hour",
+      "dtype": "int64",
+      "role": "binary",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 2,
+      "examples": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "column": "festival",
+      "dtype": "str",
+      "role": "categorical",
+      "missing": 19885,
+      "missing_pct": 99.425,
+      "unique": 4,
+      "examples": [
+        "Holi",
+        "Diwali",
+        "Eid",
+        "New Year"
+      ]
+    },
+    {
+      "column": "risk_score",
+      "dtype": "float64",
+      "role": "numeric",
+      "missing": 0,
+      "missing_pct": 0.0,
+      "unique": 18,
+      "examples": [
+        "0.85",
+        "0.1",
+        "0.45",
+        "0.65",
+        "0.3"
+      ]
+    }
+  ],
+  "numeric": {
+    "latitude": {
+      "count": 20000,
+      "mean": 20.3892073111,
+      "std": 6.165791204931201,
+      "min": 12.800172,
+      "q1": 13.19865325,
+      "median": 18.812008499999997,
+      "q3": 28.402466999999998,
+      "max": 30.79996,
+      "skew": 0.4508458864233668,
+      "non_numeric_values": 0,
+      "iqr_outliers": 0,
+      "zscore_outliers_gt3": 0,
+      "distinct_values": 19907
+    },
+    "longitude": {
+      "count": 20000,
+      "mean": 78.17333013589999,
+      "std": 4.485967271277661,
+      "min": 72.700017,
+      "q1": 73.99797875,
+      "median": 77.2970005,
+      "q3": 80.11108875000001,
+      "max": 88.499861,
+      "skew": 1.1804497916923566,
+      "non_numeric_values": 0,
+      "iqr_outliers": 0,
+      "zscore_outliers_gt3": 0,
+      "distinct_values": 19927
+    },
+    "hour": {
+      "count": 20000,
+      "mean": 11.4872,
+      "std": 6.945563202679112,
+      "min": 0,
+      "q1": 5.0,
+      "median": 12.0,
+      "q3": 18.0,
+      "max": 23,
+      "skew": -0.002949891423813536,
+      "non_numeric_values": 0,
+      "iqr_outliers": 0,
+      "zscore_outliers_gt3": 0,
+      "distinct_values": 24,
+      "valid_range": [
+        0,
+        23
+      ],
+      "impossible_values": 0
+    },
+    "lanes": {
+      "count": 20000,
+      "mean": 3.49395,
+      "std": 1.7054057634301865,
+      "min": 1,
+      "q1": 2.0,
+      "median": 4.0,
+      "q3": 5.0,
+      "max": 6,
+      "skew": -0.004088764047273166,
+      "non_numeric_values": 0,
+      "iqr_outliers": 0,
+      "zscore_outliers_gt3": 0,
+      "distinct_values": 6,
+      "valid_range": [
+        1,
+        12
+      ],
+      "impossible_values": 0
+    },
+    "temperature": {
+      "count": 20000,
+      "mean": 27.5796,
+      "std": 7.454746307026491,
+      "min": 15,
+      "q1": 21.0,
+      "median": 28.0,
+      "q3": 34.0,
+      "max": 40,
+      "skew": -0.009755948151885857,
+      "non_numeric_values": 0,
+      "iqr_outliers": 0,
+      "zscore_outliers_gt3": 0,
+      "distinct_values": 26,
+      "valid_range": [
+        -30,
+        55
+      ],
+      "impossible_values": 0
+    },
+    "vehicles_involved": {
+      "count": 20000,
+      "mean": 2.992,
+      "std": 1.415533887552446,
+      "min": 1,
+      "q1": 2.0,
+      "median": 3.0,
+      "q3": 4.0,
+      "max": 5,
+      "skew": 0.010644749688544512,
+      "non_numeric_values": 0,
+      "iqr_outliers": 0,
+      "zscore_outliers_gt3": 0,
+      "distinct_values": 5,
+      "valid_range": [
+        1,
+        100
+      ],
+      "impossible_values": 0
+    },
+    "casualties": {
+      "count": 20000,
+      "mean": 1.72645,
+      "std": 1.4891041834147982,
+      "min": 0,
+      "q1": 1.0,
+      "median": 1.0,
+      "q3": 3.0,
+      "max": 5,
+      "skew": 0.621889832667025,
+      "non_numeric_values": 0,
+      "iqr_outliers": 0,
+      "zscore_outliers_gt3": 0,
+      "distinct_values": 6,
+      "valid_range": [
+        0,
+        500
+      ],
+      "impossible_values": 0
+    },
+    "risk_score": {
+      "count": 20000,
+      "mean": 0.43758500000000006,
+      "std": 0.21812954132771653,
+      "min": 0.1,
+      "q1": 0.25,
+      "median": 0.45,
+      "q3": 0.6,
+      "max": 1.0,
+      "skew": 0.131784484601215,
+      "non_numeric_values": 0,
+      "iqr_outliers": 0,
+      "zscore_outliers_gt3": 0,
+      "distinct_values": 18,
+      "valid_range": [
+        0.0,
+        1.0
+      ],
+      "impossible_values": 0
+    },
+    "is_weekend": {
+      "count": 20000,
+      "mean": 0.28615,
+      "std": 0.45197167103654956,
+      "min": 0,
+      "q1": 0.0,
+      "median": 0.0,
+      "q3": 1.0,
+      "max": 1,
+      "skew": 0.946392886298481,
+      "non_numeric_values": 0,
+      "iqr_outliers": null,
+      "zscore_outliers_gt3": null,
+      "distinct_values": 2,
+      "non_binary_values": 0
+    },
+    "traffic_signal": {
+      "count": 20000,
+      "mean": 0.49985,
+      "std": 0.5000124779682065,
+      "min": 0,
+      "q1": 0.0,
+      "median": 0.0,
+      "q3": 1.0,
+      "max": 1,
+      "skew": 0.0006000450313148172,
+      "non_numeric_values": 0,
+      "iqr_outliers": null,
+      "zscore_outliers_gt3": null,
+      "distinct_values": 2,
+      "non_binary_values": 0
+    },
+    "is_peak_hour": {
+      "count": 20000,
+      "mean": 0.2474,
+      "std": 0.4315119350927693,
+      "min": 0,
+      "q1": 0.0,
+      "median": 0.0,
+      "q3": 0.0,
+      "max": 1,
+      "skew": 1.1708842420404506,
+      "non_numeric_values": 0,
+      "iqr_outliers": null,
+      "zscore_outliers_gt3": null,
+      "distinct_values": 2,
+      "non_binary_values": 0
+    }
+  },
+  "categorical": {
+    "city": {
+      "n_unique": 8,
+      "value_counts": {
+        "Chandigarh": 2577,
+        "Chennai": 2575,
+        "Kolkata": 2559,
+        "Pune": 2517,
+        "Mumbai": 2492,
+        "Bangalore": 2438,
+        "Delhi": 2433,
+        "Hyderabad": 2409
+      },
+      "spelling_variants": {},
+      "leading_trailing_spaces": 0
+    },
+    "state": {
+      "n_unique": 7,
+      "value_counts": {
+        "Maharashtra": 5009,
+        "Punjab": 2577,
+        "Tamil Nadu": 2575,
+        "West Bengal": 2559,
+        "Karnataka": 2438,
+        "Delhi": 2433,
+        "Telangana": 2409
+      },
+      "spelling_variants": {},
+      "leading_trailing_spaces": 0
+    },
+    "day_of_week": {
+      "n_unique": 7,
+      "value_counts": {
+        "Monday": 2966,
+        "Friday": 2879,
+        "Tuesday": 2871,
+        "Saturday": 2867,
+        "Sunday": 2856,
+        "Thursday": 2835,
+        "Wednesday": 2726
+      },
+      "spelling_variants": {},
+      "leading_trailing_spaces": 0
+    },
+    "road_type": {
+      "n_unique": 3,
+      "value_counts": {
+        "urban": 6745,
+        "rural": 6639,
+        "highway": 6616
+      },
+      "spelling_variants": {},
+      "leading_trailing_spaces": 0
+    },
+    "weather": {
+      "n_unique": 3,
+      "value_counts": {
+        "clear": 6690,
+        "rain": 6677,
+        "fog": 6633
+      },
+      "spelling_variants": {},
+      "leading_trailing_spaces": 0
+    },
+    "visibility": {
+      "n_unique": 3,
+      "value_counts": {
+        "low": 9987,
+        "high": 6690,
+        "medium": 3323
+      },
+      "spelling_variants": {},
+      "leading_trailing_spaces": 0
+    },
+    "traffic_density": {
+      "n_unique": 3,
+      "value_counts": {
+        "low": 7067,
+        "high": 7034,
+        "medium": 5899
+      },
+      "spelling_variants": {},
+      "leading_trailing_spaces": 0
+    },
+    "cause": {
+      "n_unique": 5,
+      "value_counts": {
+        "distraction": 4026,
+        "overspeeding": 4025,
+        "weather": 3997,
+        "drunk driving": 3978,
+        "poor road": 3974
+      },
+      "spelling_variants": {},
+      "leading_trailing_spaces": 0
+    },
+    "accident_severity": {
+      "n_unique": 3,
+      "value_counts": {
+        "minor": 11025,
+        "major": 5988,
+        "fatal": 2987
+      },
+      "spelling_variants": {},
+      "leading_trailing_spaces": 0
+    },
+    "festival": {
+      "n_unique": 4,
+      "value_counts": {
+        "<missing>": 19885,
+        "Holi": 38,
+        "Eid": 34,
+        "Diwali": 31,
+        "New Year": 12
+      },
+      "spelling_variants": {},
+      "leading_trailing_spaces": 0
+    }
+  },
+  "duplicates": {
+    "exact_duplicate_rows": 0,
+    "accident_id_unique": true,
+    "duplicate_accident_ids": 0,
+    "missing_accident_ids": 0,
+    "accident_id_is_sequential_0_to_n_minus_1": true,
+    "duplicate_rows_ignoring_id": 0
+  },
+  "dates_times": {
+    "date": {
+      "iso_yyyy_mm_dd_share_pct": 100.0,
+      "unparseable": 0,
+      "missing": 0,
+      "min": "2022-01-01T00:00:00",
+      "max": "2025-04-15T00:00:00",
+      "distinct_days": 1201,
+      "records_per_year": {
+        "2022": 6117,
+        "2023": 6088,
+        "2024": 6061,
+        "2025": 1734
+      },
+      "last_month_days_covered": 15,
+      "last_month_days_in_month": 30,
+      "months_covered_per_year": {
+        "2022": 12,
+        "2023": 12,
+        "2024": 12,
+        "2025": 4
+      }
+    },
+    "day_of_week_matches_date_pct": 100.0,
+    "is_weekend_matches_date_pct": 100.0,
+    "time": {
+      "format_patterns": {
+        "99:99": 11680,
+        "9:99": 8320
+      },
+      "unparseable": 0,
+      "share_on_the_hour_pct": 100.0,
+      "hour_matches_time_pct": 100.0
+    }
+  },
+  "peak_hour": {
+    "inferred_peak_hours": [
+      8,
+      9,
+      10,
+      17,
+      18,
+      19
+    ],
+    "is_peak_hour_matches_rule_pct": 100.0
+  },
+  "coordinates": {
+    "available": true,
+    "missing": 0,
+    "outside_india_bbox": 0,
+    "zero_zero": 0,
+    "decimal_places_typical": 6,
+    "km_from_city_median": {
+      "median": 14.033027029774495,
+      "p95": 26.472987625627287,
+      "max": 37.238942648185684,
+      "beyond_75km": 0
+    },
+    "per_city_extent_deg": {
+      "bangalore": {
+        "lat_range": 0.399,
+        "lon_range": 0.4
+      },
+      "chandigarh": {
+        "lat_range": 0.2,
+        "lon_range": 0.2
+      },
+      "chennai": {
+        "lat_range": 0.399,
+        "lon_range": 0.2
+      },
+      "delhi": {
+        "lat_range": 0.499,
+        "lon_range": 0.5
+      },
+      "hyderabad": {
+        "lat_range": 0.4,
+        "lon_range": 0.4
+      },
+      "kolkata": {
+        "lat_range": 0.3,
+        "lon_range": 0.3
+      },
+      "mumbai": {
+        "lat_range": 0.5,
+        "lon_range": 0.3
+      },
+      "pune": {
+        "lat_range": 0.3,
+        "lon_range": 0.3
+      }
+    },
+    "cities_mapped_to_multiple_states": []
+  },
+  "consistency": {
+    "fatal_with_zero_casualties": 0,
+    "major_with_zero_casualties": 1725,
+    "casualties_by_severity_mean": {
+      "fatal": 3.0016739203213927,
+      "major": 1.4948229792919172,
+      "minor": 1.5067573696145125
+    },
+    "zero_casualty_records": 4925,
+    "casualties_equal_vehicles_pct": 39.825,
+    "casualties_exceed_vehicles_pct": 0.0,
+    "fatal_casualties_equal_vehicles_pct": 100.0,
+    "weather_vs_visibility": {
+      "clear": {
+        "high": 6690,
+        "low": 0,
+        "medium": 0
+      },
+      "fog": {
+        "high": 0,
+        "low": 6633,
+        "medium": 0
+      },
+      "rain": {
+        "high": 0,
+        "low": 3354,
+        "medium": 3323
+      }
+    },
+    "visibility_determined_by_weather_pct": 83.385
+  },
+  "risk_score": {
+    "distinct_values": 18,
+    "values": [
+      0.1,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+    ],
+    "smallest_step": 0.05,
+    "formula_check": {
+      "formula": "risk_score = min(1, 0.10 + 0.20\u00b7[severity = fatal] + 0.20\u00b7[traffic_density = high] + 0.15\u00b7[is_peak_hour] + 0.15\u00b7[weather \u2208 {fog, rain}] + 0.20\u00b7[visibility = low] + 0.10\u00b7[festival recorded])",
+      "exact_match_pct": 100.0,
+      "max_abs_difference": 1.1102230246251565e-16
+    },
+    "share_of_variance_explained_by_column": {
+      "visibility": 0.5337,
+      "weather": 0.4612,
+      "traffic_density": 0.2844,
+      "time": 0.1987,
+      "is_peak_hour": 0.1498,
+      "accident_severity": 0.1066,
+      "hour": 0.0134,
+      "casualties": 0.0126,
+      "festival": 0.0021,
+      "cause": 0.0004,
+      "road_type": 0.0001,
+      "city": 0.0001,
+      "day_of_week": 0.0001,
+      "lanes": 0.0,
+      "temperature": 0.0,
+      "vehicles_involved": 0.0,
+      "is_weekend": 0.0,
+      "traffic_signal": 0.0
+    },
+    "mean_by_severity": {
+      "fatal": 0.6075159022430533,
+      "major": 0.40684702738810957,
+      "minor": 0.40824036281179144
+    }
+  },
+  "uniformity": {
+    "city": {
+      "categories": 8,
+      "chi2": 12.800799999999999,
+      "p_value": 0.07711318669018896,
+      "max_to_min_ratio": 1.0697384806973849,
+      "consistent_with_uniform": true
+    },
+    "hour": {
+      "categories": 24,
+      "chi2": 22.825599999999998,
+      "p_value": 0.47099286987000166,
+      "max_to_min_ratio": 1.1297709923664123,
+      "consistent_with_uniform": true
+    },
+    "day_of_week": {
+      "categories": 7,
+      "chi2": 10.607399999999998,
+      "p_value": 0.10129488097849813,
+      "max_to_min_ratio": 1.0880410858400587,
+      "consistent_with_uniform": true
+    },
+    "cause": {
+      "categories": 5,
+      "chi2": 0.6175,
+      "p_value": 0.9610993275719139,
+      "max_to_min_ratio": 1.0130850528434827,
+      "consistent_with_uniform": true
+    },
+    "weather": {
+      "categories": 3,
+      "chi2": 0.26769999999999994,
+      "p_value": 0.8747212629526547,
+      "max_to_min_ratio": 1.0085933966530982,
+      "consistent_with_uniform": true
+    },
+    "road_type": {
+      "categories": 3,
+      "chi2": 1.4203000000000001,
+      "p_value": 0.49157045636206664,
+      "max_to_min_ratio": 1.0194981862152357,
+      "consistent_with_uniform": true
+    },
+    "lanes": {
+      "categories": 6,
+      "chi2": 4.198600000000001,
+      "p_value": 0.521191206198331,
+      "max_to_min_ratio": 1.035189718482252,
+      "consistent_with_uniform": true
+    },
+    "traffic_density": {
+      "categories": 3,
+      "chi2": 132.6769,
+      "p_value": 1.5473096247215446e-29,
+      "max_to_min_ratio": 1.1979996609594847,
+      "consistent_with_uniform": false
+    },
+    "month (complete months)": {
+      "categories": 39,
+      "chi2": 50.035522720372434,
+      "p_value": 0.09148159993302644,
+      "max_to_min_ratio": 1.261744966442953,
+      "consistent_with_uniform": true
+    }
+  },
+  "festival": {
+    "records_with_festival": 115,
+    "labels": {
+      "Diwali": {
+        "records": 31,
+        "distinct_dates": 2,
+        "months_seen": [
+          11
+        ],
+        "on_actual_festival_date_pct": 100.0,
+        "dates": [
+          "2023-11-12",
+          "2024-11-01"
+        ]
+      },
+      "Eid": {
+        "records": 34,
+        "distinct_dates": 2,
+        "months_seen": [
+          4
+        ],
+        "on_actual_festival_date_pct": 100.0,
+        "dates": [
+          "2023-04-22",
+          "2024-04-10"
+        ]
+      },
+      "Holi": {
+        "records": 38,
+        "distinct_dates": 2,
+        "months_seen": [
+          3
+        ],
+        "on_actual_festival_date_pct": 100.0,
+        "dates": [
+          "2023-03-08",
+          "2024-03-25"
+        ]
+      },
+      "New Year": {
+        "records": 12,
+        "distinct_dates": 1,
+        "months_seen": [
+          1
+        ],
+        "on_actual_festival_date_pct": 100.0,
+        "dates": [
+          "2023-01-01"
+        ]
+      }
+    },
+    "calendar_coverage": [
+      {
+        "festival": "Diwali",
+        "reference_date": "2022-10-24",
+        "records_on_date": 14,
+        "labelled_within_1_day": 0
+      },
+      {
+        "festival": "Diwali",
+        "reference_date": "2023-11-12",
+        "records_on_date": 12,
+        "labelled_within_1_day": 12
+      },
+      {
+        "festival": "Diwali",
+        "reference_date": "2024-10-31",
+        "records_on_date": 9,
+        "labelled_within_1_day": 19
+      },
+      {
+        "festival": "Diwali",
+        "reference_date": "2024-11-01",
+        "records_on_date": 19,
+        "labelled_within_1_day": 19
+      },
+      {
+        "festival": "Holi",
+        "reference_date": "2022-03-18",
+        "records_on_date": 9,
+        "labelled_within_1_day": 0
+      },
+      {
+        "festival": "Holi",
+        "reference_date": "2023-03-08",
+        "records_on_date": 15,
+        "labelled_within_1_day": 15
+      },
+      {
+        "festival": "Holi",
+        "reference_date": "2024-03-25",
+        "records_on_date": 23,
+        "labelled_within_1_day": 23
+      },
+      {
+        "festival": "Holi",
+        "reference_date": "2025-03-14",
+        "records_on_date": 16,
+        "labelled_within_1_day": 0
+      },
+      {
+        "festival": "Eid",
+        "reference_date": "2022-05-03",
+        "records_on_date": 19,
+        "labelled_within_1_day": 0
+      },
+      {
+        "festival": "Eid",
+        "reference_date": "2023-04-22",
+        "records_on_date": 20,
+        "labelled_within_1_day": 20
+      },
+      {
+        "festival": "Eid",
+        "reference_date": "2024-04-11",
+        "records_on_date": 15,
+        "labelled_within_1_day": 14
+      },
+      {
+        "festival": "Eid",
+        "reference_date": "2025-03-31",
+        "records_on_date": 14,
+        "labelled_within_1_day": 0
+      },
+      {
+        "festival": "New Year",
+        "reference_date": "2022-01-01",
+        "records_on_date": 18,
+        "labelled_within_1_day": 0
+      },
+      {
+        "festival": "New Year",
+        "reference_date": "2023-01-01",
+        "records_on_date": 12,
+        "labelled_within_1_day": 12
+      },
+      {
+        "festival": "New Year",
+        "reference_date": "2024-01-01",
+        "records_on_date": 11,
+        "labelled_within_1_day": 0
+      },
+      {
+        "festival": "New Year",
+        "reference_date": "2025-01-01",
+        "records_on_date": 12,
+        "labelled_within_1_day": 0
+      }
+    ],
+    "festival_dates_never_labelled": [
+      "Diwali 2022-10-24",
+      "Holi 2022-03-18",
+      "Holi 2025-03-14",
+      "Eid 2022-05-03",
+      "Eid 2025-03-31",
+      "New Year 2022-01-01",
+      "New Year 2024-01-01",
+      "New Year 2025-01-01"
+    ]
+  },
+  "derived_columns": [
+    {
+      "column": "hour",
+      "derived_from": "time",
+      "agreement_pct": 100.0
+    },
+    {
+      "column": "day_of_week",
+      "derived_from": "date",
+      "agreement_pct": 100.0
+    },
+    {
+      "column": "is_weekend",
+      "derived_from": "date",
+      "agreement_pct": 100.0
+    },
+    {
+      "column": "is_peak_hour",
+      "derived_from": "hour \u2208 [8, 9, 10, 17, 18, 19]",
+      "agreement_pct": 100.0
+    },
+    {
+      "column": "visibility",
+      "derived_from": "weather (modal mapping)",
+      "agreement_pct": 83.385
+    },
+    {
+      "column": "risk_score",
+      "derived_from": "composite; strongest single input = visibility (53.4% of variance)",
+      "agreement_pct": null
+    }
+  ],
+  "provenance": {
+    "source": "Kaggle dataset 'Indian Road Accident Dataset 2022\u20132025' uploaded by user sehaj1104. No collecting agency, methodology or licence linking it to MoRTH, NCRB or iRAD records is documented.",
+    "signals": [
+      "8 of 9 categorical/temporal marginals are statistically indistinguishable from a uniform distribution (chi-square, \u03b1=0.05).",
+      "Every timestamp is exactly on the hour (minutes = 00).",
+      "risk_score takes only 18 discrete values (step 0.05).",
+      "risk_score is reproduced exactly (100.0% of rows) by a simple additive rule: risk_score = min(1, 0.10 + 0.20\u00b7[severity = fatal] + 0.20\u00b7[traffic_density = high] + 0.15\u00b7[is_peak_hour] + 0.15\u00b7[weather \u2208 {fog, rain}] + 0.20\u00b7[visibility = low] + 0.10\u00b7[festival recorded]).",
+      "For every fatal accident, casualties == vehicles_involved exactly; casualties never exceed vehicles in any record \u2014 a generation rule, not an observed pattern.",
+      "1,725 'major' accidents record zero casualties (logically inconsistent with a major-injury classification).",
+      "Festival labels cover only some years; real festival days with records but no label: Diwali 2022-10-24, Holi 2022-03-18, Holi 2025-03-14, Eid 2022-05-03, Eid 2025-03-31, New Year 2022-01-01, New Year 2024-01-01, New Year 2025-01-01.",
+      "accident_id is a plain 0\u2026n-1 row index rather than an official FIR / iRAD reference."
+    ],
+    "verdict": "Likely SIMULATED / SYNTHETIC. Treat all findings as properties of this dataset, not of Indian road safety.",
+    "likely_synthetic": true
+  }
+}

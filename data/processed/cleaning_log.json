@@ -1,0 +1,93 @@
+[
+  {
+    "step": "load",
+    "column": "<all>",
+    "action": "loaded raw records",
+    "rows_affected": 20000,
+    "rationale": "Full dataset \u2014 no sampling."
+  },
+  {
+    "step": "duplicates",
+    "column": "accident_id",
+    "action": "verified unique",
+    "rows_affected": 0,
+    "rationale": "No duplicate ids found."
+  },
+  {
+    "step": "dates",
+    "column": "time",
+    "action": "normalised 'H:MM' \u2192 'HH:00'",
+    "rows_affected": 20000,
+    "rationale": "Raw mixes '5:00' and '13:00'; all times are on the hour, so a zero-padded form is used."
+  },
+  {
+    "step": "coordinates",
+    "column": "latitude/longitude",
+    "action": "validated against India bounding box and city centre (>75 km flagged)",
+    "rows_affected": 0,
+    "rationale": "Invalid coordinates are excluded from maps via coord_valid=0; they are not imputed or relocated, so no location is fabricated."
+  },
+  {
+    "step": "missing",
+    "column": "festival",
+    "action": "missing \u2192 'No Festival' (in festival_name); raw column kept",
+    "rows_affected": 19885,
+    "rationale": "Missing here is structural (no festival that day), not unknown. Note: labels exist only for 2023\u20132024 festival dates; see the profile."
+  },
+  {
+    "step": "features",
+    "column": "condition_risk",
+    "action": "risk_score recomputed without its severity term",
+    "rows_affected": 20000,
+    "rationale": "risk_score is an exact additive rule that includes severity; condition_risk lets severity be compared against conditions without circular reasoning."
+  },
+  {
+    "step": "features",
+    "column": "<derived>",
+    "action": "added year, month, month_name, quarter, year_month, year_quarter, week_of_year, day_type, time_of_day, peak_label, season, festival_flag, festival_name, severity_category, severity_rank, is_fatal, casualties_per_vehicle, has_casualties, collision_type, signal_label, risk_band, condition_risk, coord_valid, km_from_city_centre",
+    "rows_affected": 20000,
+    "rationale": "Analytical features; raw columns are retained alongside."
+  },
+  {
+    "step": "quality",
+    "column": "accident_severity/casualties",
+    "action": "flagged 'major' accidents with zero casualties (kept)",
+    "rows_affected": 1725,
+    "rationale": "Logically inconsistent, but there is no basis to say which field is wrong; flagged so users can exclude them."
+  },
+  {
+    "step": "outliers",
+    "column": "casualties",
+    "action": "IQR rule (1.5\u00d7IQR, fences -2.00\u20136.00) \u2014 flagged, not removed",
+    "rows_affected": 0,
+    "rationale": "Outliers are flagged so analysis can test sensitivity; none are deleted."
+  },
+  {
+    "step": "outliers",
+    "column": "vehicles_involved",
+    "action": "IQR rule (1.5\u00d7IQR, fences -1.00\u20137.00) \u2014 flagged, not removed",
+    "rows_affected": 0,
+    "rationale": "Outliers are flagged so analysis can test sensitivity; none are deleted."
+  },
+  {
+    "step": "outliers",
+    "column": "temperature",
+    "action": "IQR rule (1.5\u00d7IQR, fences 1.50\u201353.50) \u2014 flagged, not removed",
+    "rows_affected": 0,
+    "rationale": "Outliers are flagged so analysis can test sensitivity; none are deleted."
+  },
+  {
+    "step": "outliers",
+    "column": "km_from_city_centre",
+    "action": "IQR rule (1.5\u00d7IQR, fences -5.71\u201334.25) \u2014 flagged, not removed",
+    "rows_affected": 28,
+    "rationale": "Outliers are flagged so analysis can test sensitivity; none are deleted."
+  },
+  {
+    "step": "output",
+    "column": "<all>",
+    "action": "records in cleaned dataset",
+    "rows_affected": 20000,
+    "rationale": "0 rows removed in total (exact duplicates only)."
+  }
+]
